@@ -40,6 +40,18 @@ class CalculatorTest {
         calculator.addValue(Integer.MAX_VALUE.toDouble())
         assertTrue(calculator.toString().contains("${Integer.MAX_VALUE.toDouble()}]"))
     }
+
+    @Test
+    fun setProperDoubleModifier() {
+        calculator.setModifier(4.2E1)
+    }
+
+    @Test
+    fun setProperDoubleModifierWithCheck() {
+        calculator.setModifier(4.2E1)
+        assertTrue(calculator.toString().contains("modifier="+42.0.toString()))
+    }
+
     @Test
     fun removeValue() {
     }
