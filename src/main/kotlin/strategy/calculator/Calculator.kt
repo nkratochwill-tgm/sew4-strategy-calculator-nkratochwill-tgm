@@ -8,6 +8,8 @@ class Calculator {
     private var modifier: Double = 0.0
     private var calculation:Calculation?=null
 
+
+
     fun addValue(value: Double) {
         values.add(value)
     }

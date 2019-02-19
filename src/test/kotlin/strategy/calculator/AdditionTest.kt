@@ -5,14 +5,13 @@ import org.junit.Before
 import org.junit.Test
 
 import org.junit.Assert.*
+import strategy.calculator.calculations.Addition
 
 class AdditionTest {
-    lateinit var calculator:Calculator
-    lateinit var addition:Addition
+    lateinit var calculation: Calculation
     @Before
     fun setUp(){
-        calculator=Calculator()
-        addition=Addition()
+        calculation=Addition()
     }
 
     @After
@@ -21,7 +20,7 @@ class AdditionTest {
 
     @Test
     fun processCalculations() {
-        assertEquals(listOf(8.0,9.0),addition.processCalculations(values = mutableListOf(4.0,5.0),modifier = 4.0))
+        assertEquals(listOf(8.0,9.0),calculation.processCalculations(values = mutableListOf(4.0,5.0),modifier = 4.0))
 
 
     }
